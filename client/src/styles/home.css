@@ -1,0 +1,327 @@
+.container {
+  display: flex !important;
+  margin: 2vmax auto !important;
+  width: 80vw !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  max-width: 100% !important;
+}
+
+.productCard {
+  width: 14vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+}
+
+.product-link > img {
+  width: 14vmax !important;
+  height: 10vmax;
+}
+
+.ratings {
+  margin: 0.5vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.productCardSpan {
+  margin: 0.5vmax;
+  font: 300 0.7vmax 'Roboto';
+}
+
+.product-link > p {
+  font-family: 'Roboto';
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+}
+
+.product-link > span {
+  margin: 0.5vmax;
+  color: tomato;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+    Arial, sans-serif;
+  font-size: 1vmax;
+}
+
+.productCard:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+
+  transform: translateY(-1vmax);
+}
+
+.Edit,
+.Delete {
+  cursor: pointer;
+  padding: 10px 20px;
+  text-align: center;
+  max-width: 90px;
+  border-radius: 50%;
+}
+.Edit:hover {
+  background-color: pink;
+  transition: ease-in 0.5s;
+}
+.Delete:hover {
+  background-color: pink;
+  transition: ease-in 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+  .product-link > p {
+    font-size: 1.7vmax;
+  }
+
+  .product-link > div {
+    margin: 0vmax;
+    display: block;
+  }
+
+  .product-link > span {
+    font-size: 1.5vmax;
+  }
+
+  .product-link > div > span {
+    margin: 0 0.5vmax;
+    font: 300 1vmax 'Roboto';
+  }
+}
+
+.admin-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.heading-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading-service h5 {
+  display: table-cell;
+  white-space: pre;
+  padding: 0 8px;
+  color: #111;
+}
+
+.module-title {
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 30px;
+  color: #111;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
+.font-serif {
+  font-family: Volkhov, 'Times New Roman', sans-serif;
+  font-style: italic;
+}
+
+.features-icon {
+  line-height: 1.2;
+  font-size: 42px;
+  color: #111;
+}
+
+.features-item {
+  text-align: center;
+}
+
+.features-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #111;
+  margin: 16px 0 15px;
+}
+
+.video-2 {
+  text-align: center;
+  padding: 100px;
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+#myVideo {
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  min-height: 20%;
+}
+
+.content-1 {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 50px;
+}
+
+.about-us {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  padding-bottom: 30px;
+}
+
+.about-us-text {
+  padding: 0px 40px;
+}
+
+.about-us-title {
+  font-family: Volkhov, 'Times New Roman', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.about-us-text h2 {
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 30px;
+  color: #111;
+}
+
+.about-us-text p {
+  margin: 0 0 20px;
+}
+
+.font-alt {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.shop-item-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60%;
+}
+
+.hover-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  transition: all 0.4s;
+}
+
+.hover img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.hover-content {
+  position: relative;
+  z-index: 9;
+}
+
+/* DEMO 1 ============================== */
+.hover-1 img {
+  width: 105%;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  transition: all 0.3s;
+}
+
+.hover-1-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  transition: all 0.4s;
+}
+
+.hover-1 .hover-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hover-1-description {
+  transform: translateY(0.5rem);
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.hover-1:hover .hover-1-content {
+  bottom: 2rem;
+}
+
+.hover-1:hover .hover-1-description {
+  opacity: 1;
+  transform: none;
+}
+
+.hover-1:hover img {
+  left: 0;
+}
+
+.hover-1:hover .hover-overlay {
+  opacity: 0;
+}
+
+.our-product {
+  height: 100%;
+  padding-bottom: 70px;
+}
+
+.img-fluid {
+  height: 500px !important;
+}
+
+.callout-title {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+}
+
+.callout-text {
+  text-align: center;
+}
+
+.btn-contact {
+  background-color: #e5e5e5 !important;
+  color: #111;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  padding: 8px 37px;
+  height: 38px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 30%;
+  left: 49%;
+}
+
+.bottom-left:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .img-fluid {
+    margin-bottom: 20px;
+  }
+}

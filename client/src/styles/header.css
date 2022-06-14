@@ -1,0 +1,84 @@
+.speedDial {
+  position: fixed;
+  right: 3vmax;
+  top: 3vmax;
+}
+
+.speedDialIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+.menuBurger {
+  height: 4vmax !important;
+}
+
+.logoReactNavbar {
+  border-radius: 50% !important;
+  width: 250px !important;
+  height: 250px !important;
+}
+
+.navbar {
+  z-index: 10;
+  position: fixed;
+}
+
+.navbar-brand span {
+  font-weight: bold;
+  font-size: 32px;
+  color: #ffffff;
+  font-family: 'Dancing Script', cursive;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.nav-link {
+  color: pink !important;
+  padding: 5px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s;
+  font-size: 1.3rem;
+}
+@media (min-width: 991px) {
+  .navbar-nav {
+    margin-left: 15% !important;
+  }
+  .navbar-brand {
+    text-align: end;
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 991px) {
+  .logo {
+    margin: 0px !important;
+  }
+  .navbar-brand {
+    width: 30px;
+    left: -45%;
+  }
+  .navbar {
+    display: flex !important;
+    justify-content: center !important;
+    height: 6rem !important;
+  }
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-toggler {
+    margin-left: -30px;
+  }
+}
+
+@media (min-width: 568px) and (max-width: 991px) {
+  .navbar-nav {
+    margin-left: 0% !important;
+  }
+}
