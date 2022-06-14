@@ -1,0 +1,37 @@
+PUT http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+  "username": "test",
+  "password":"1",
+  "protectedCode": "1",
+}
+
+###
+GET http://localhost:5000/api/orders/me
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWRjOTA4MTk5OTdjZDRiODExY2Y1NSIsImlhdCI6MTY1NTAxMDMzMiwiZXhwIjoxNjU1MDk2NzMyfQ.IGftIXNLH1Gpqy2DvGgQVpdx8alpixjLUwoAh83VwUE
+
+
+
+###
+PATCH  http://localhost:5000/api/category/62720fc8deacfaf03366f980
+Content-Type: application/json
+
+{
+  "name":"hoho1"
+}
+
+###
+POST http://localhost:5000/api/products
+Content-Type: application/json
+
+{
+  "name": "test2",
+  "description":"test",
+  "price":12,
+  "stock":12,
+  "category":"asd"
+}
+###
+DELETE http://localhost:5000/api/products/627368aa0f7f4cf316b81781
