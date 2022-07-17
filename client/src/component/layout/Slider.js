@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import video from '../../images/video.mov'
+import phongcanh from '../../images/phongcanh.mp4'
 import audio from '../../images/audio.mp3'
 import { useState } from "react";
 
@@ -33,7 +33,9 @@ const Slider = () => {
         <section className="showcase">
 
             <div className="video-container">
-                <video src={video} autoPlay loop></video>
+                <video autoPlay muted loop >
+                    <source src={phongcanh} type="video/mp4" />
+                </video>
 
             </div>
             <div className="content">
