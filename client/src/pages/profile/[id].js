@@ -3,6 +3,8 @@ import Info from '../../component/profile/Info'
 import { getUser } from '../../redux/action/userAction'
 import { useSelector, useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import BgImage from '../component/BgImage'
+
 const Profile = () => {
     const { profile, auth } = useSelector(state => state)
     const dispatch = useDispatch()
@@ -16,6 +18,7 @@ const Profile = () => {
 
     return (
         <>
+            <BgImage />
             <Info auth={auth} profile={profile} dispatch={dispatch} id={id} />
         </>
     )
