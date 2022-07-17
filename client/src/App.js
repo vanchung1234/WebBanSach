@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Alert from "./component/alert/Alert";
 import Loading from "./component/alert/Loading";
-import BgImage from "./component/BgImage";
 import CategoryModal from "./component/CategoryModal";
 import Footer from "./component/layout/Footer";
 import Header from "./component/layout/Header/Header";
@@ -26,7 +25,6 @@ import OrderList from "./pages/dashboard/OrderList";
 import Products from "./pages/products";
 import Product from "./pages/product/[id]";
 import AdminRouter from "./customRouter/AdminRouter";
-import { myOrder } from "./redux/action/orderAction";
 import Category from "./pages/category";
 import Contact from "./pages/contact";
 function App() {
@@ -35,9 +33,7 @@ function App() {
 
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(myOrder({ auth }))
-  }, [auth, dispatch])
+
 
   useEffect(() => {
     dispatch(getCategories(auth))
@@ -51,9 +47,7 @@ function App() {
         <Header />
       }
 
-      {
-        <BgImage />
-      }
+
 
 
       {auth.token && <UserOptions />}

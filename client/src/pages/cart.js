@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { addToCart, removeItemsFromCart } from "../redux/action/cartAction";
 import CartItemCard from "../component/cart/CartItemCard";
 import { useAlert } from "react-alert";
+import BgImage from '../component/BgImage'
 
 const Cart = () => {
 
@@ -40,6 +41,7 @@ const Cart = () => {
     };
     return (
         <Fragment>
+            <BgImage />
             {cartItems.length === 0 ? (
                 <div className="emptyCart">
                     <RemoveShoppingCartIcon />

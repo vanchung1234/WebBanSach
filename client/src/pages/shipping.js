@@ -11,6 +11,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import { Country, State } from "country-state-city";
 import TransferWithinAStationIcon from "@material-ui/icons/TransferWithinAStation";
 import { useAlert } from "react-alert";
+import BgImage from '../component/BgImage'
 
 const Shipping = () => {
     const dispatch = useDispatch()
@@ -42,7 +43,7 @@ const Shipping = () => {
 
     return (
         <Fragment>
-
+            <BgImage />
             <CheckoutSteps activeStep={0} />
 
             <div className="shippingContainer">

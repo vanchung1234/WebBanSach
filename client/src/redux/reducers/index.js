@@ -10,7 +10,7 @@ import productModal from './productModal'
 import cart from './cartReducer'
 import order from './orderReducer'
 import generic from './genericReducer'
-import myOrder from './myOrder'
+import myOrders from './myOrder'
 import allProduct from './allProduct'
 import modalAdmin from './modalAdmin'
 import detailOrder from './detailOrder'
@@ -25,7 +25,7 @@ export default combineReducers({
   productModal,
   cart, order,
   generic,
-  myOrder,
+  myOrders,
   allProduct,
   modalAdmin,
   detailOrder

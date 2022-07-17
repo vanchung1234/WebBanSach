@@ -1,13 +1,18 @@
-import React from 'react'
-import { useSelector } from "react-redux";
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from "react-redux";
 import { DataGrid } from '@mui/x-data-grid';
 import Moment from 'react-moment';
 import { Typography } from "@material-ui/core";
 import RemoveShoppingCartIcon from "@material-ui/icons/RemoveShoppingCart";
 import { Link } from "react-router-dom";
+import BgImage from '../component/BgImage'
+import { myOrder } from '../redux/action/orderAction';
 const Myorders = () => {
-    const { myOrder } = useSelector(state => state)
-
+    const { myOrders, auth } = useSelector(state => state)
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(myOrder({ auth }))
+    }, [auth, dispatch])
     const columns = [
         { field: '_id', headerName: 'ID', width: 180 },
         {
@@ -109,46 +114,46 @@ const Myorders = () => {
 
     const rows = []
 
-    myOrder.orders.map((item) => (
+    myOrders.orders.map((item) => (
         rows.push(item)
     ))
 
     return (
+        <>
+            <BgImage />
+            <div style={{ height: '100vh' }}>
+                <div className='heading-db-p'>
 
+                    <span style={{ textAlign: 'center', fontSize: '40px' }} >My Order</span>
 
-        <div style={{ height: '100vh' }}>
-            <div className='heading-db-p'>
+                </div>
 
-                <span style={{ textAlign: 'center', fontSize: '40px' }} >My Order</span>
+                {
+                    myOrders.orders.length === 0 ? (
+                        <div className="emptyCart" style={{ height: '0px' }}>
+                            <RemoveShoppingCartIcon />
+
+                            <Typography>No Order </Typography>
+                            <Link to="/products">View Products</Link>
+                        </div>
+                    ) : (
+                        <DataGrid
+                            rows={rows}
+                            columns={columns}
+                            pageSize={8}
+                            rowsPerPageOptions={[8]}
+                            checkboxSelection
+                            getRowId={(row) => row._id}
+
+                        />
+                    )
+                }
+
 
             </div>
 
-            {
-                myOrder.orders.length === 0 ? (
-                    <div className="emptyCart" style={{ height: '0px' }}>
-                        <RemoveShoppingCartIcon />
 
-                        <Typography>No Order </Typography>
-                        <Link to="/products">View Products</Link>
-                    </div>
-                ) : (
-                    <DataGrid
-                        rows={rows}
-                        columns={columns}
-                        pageSize={8}
-                        rowsPerPageOptions={[8]}
-                        checkboxSelection
-                        getRowId={(row) => row._id}
-
-                    />
-                )
-            }
-
-
-        </div>
-
-
-
+        </>
     );
 
 }

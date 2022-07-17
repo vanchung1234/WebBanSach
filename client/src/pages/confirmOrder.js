@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
 import { createOrder } from "../redux/action/orderAction";
 import PaypalButton from "../component/cart/PaypalButton";
+import BgImage from '../component/BgImage'
+
 const ConfirmOrder = () => {
 
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
@@ -67,6 +69,7 @@ const ConfirmOrder = () => {
   };
   return (
     <Fragment>
+      <BgImage />
       <CheckoutSteps activeStep={1} />
       <div className="confirmOrderPage">
         <div>

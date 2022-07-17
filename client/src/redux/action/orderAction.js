@@ -114,6 +114,7 @@ export const updateauto = (order) => async (dispatch) => {
 export const myOrder = ({ auth }) => async (dispatch) => {
     try {
         const res = await getDataAPI('orders/me', auth.token)
+
         dispatch({
             type: ODER_TYPES.MY_ORDERS,
             payload: { ...res.data }

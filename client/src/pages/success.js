@@ -2,10 +2,12 @@ import React from "react";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import BgImage from '../component/BgImage'
+
 const OrderSuccess = () => {
     return (
         <>
-
+            <BgImage />
             <div className="orderSuccess">
                 <CheckCircleIcon />
 

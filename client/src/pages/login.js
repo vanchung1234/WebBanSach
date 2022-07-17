@@ -156,9 +156,9 @@ const Login = () => {
                         <div className="signUpPassword">
                             <LockOpenIcon />
                             <input
-                                type="text"
-                                placeholder="Protected Code"
-                                name="Mã bảo vệ"
+                                type="password"
+                                placeholder="Mã bảo vệ dùng cho lúc bạn quên mật khẩu"
+                                name="protectedCode"
                                 value={protectedCode}
                                 onChange={registerDataChange}
                                 style={{ background: `${alert.password ? "#fd2d6a14" : ""}` }}

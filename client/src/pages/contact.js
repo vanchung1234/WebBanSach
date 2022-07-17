@@ -1,8 +1,12 @@
 import React from 'react'
+import BgImage from '../component/BgImage'
 
 const Contact = () => {
     return (
-        <div className=''>Contact</div>
+        <div className=''>
+            <BgImage />
+            Contact
+        </div>
     )
 }
 
