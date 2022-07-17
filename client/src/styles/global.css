@@ -1,3 +1,6 @@
+#root {
+  overflow-x: hidden;
+}
 .img-thumbnail {
   max-width: 100% !important;
 }
