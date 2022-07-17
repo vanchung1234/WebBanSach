@@ -24,18 +24,18 @@ const Dashboard = () => {
     const [userStats, setUserStats] = useState([]);
     const MONTHS = useMemo(
         () => [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Agu",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
+            "Tháng 1",
+            "Tháng 2",
+            "Tháng 3",
+            "Tháng 4",
+            "Tháng 5",
+            "Tháng 6",
+            "Tháng 7",
+            "Tháng 8",
+            "Tháng 9",
+            "Tháng 10",
+            "Tháng 11",
+            "Tháng 12",
         ],
         []
     );
@@ -44,10 +44,11 @@ const Dashboard = () => {
         const getStats = async () => {
             try {
                 const res = await getDataAPI("stats");
+                console.log(res)
                 res.data.map((item) =>
                     setUserStats((prev) => [
                         ...prev,
-                        { name: MONTHS[item._id - 1], "Active User": item.total },
+                        { name: MONTHS[item._id - 1], "Người dùng đăng ký": item.total },
                     ])
                 );
             } catch { }
@@ -64,9 +65,9 @@ const Dashboard = () => {
                 <FeaturedInfo />
                 <Chart
                     data={userStats}
-                    title="User Analytics"
+                    title="Phân tích người dùng"
                     grid
-                    dataKey="Active User"
+                    dataKey="Người dùng đăng ký"
                 />
                 <StatsOrder />
                 <div className="homeWidgets">

@@ -20,7 +20,6 @@ const Header = () => {
     }, []);
 
     const { auth } = useSelector(state => state)
-
     return (
         <nav className="navbar navbar-expand-lg  navbar-dark " style={{
             backgroundColor: navColor,
@@ -37,16 +36,16 @@ const Header = () => {
             <div className="collapse navbar-collapse col-lg-10" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item ">
-                        <Link className="nav-link" to={'/'}>Home <span className="sr-only">(current)</span></Link>
+                        <Link className="nav-link" to={'/'}>Trang chủ <span className="sr-only">(current)</span></Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to={'/products'}>Products</Link>
+                        <Link className="nav-link" to={'/products'}>Sản phẩm</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to={'/contact'}>Contact</Link>
+                        <Link className="nav-link" to={'/contact'}>Liên hệ với chúng tôi</Link>
                     </li>
                     {!auth.token && <li className="nav-item">
-                        <Link className="nav-link" to={'/login'}>Login</Link>
+                        <Link className="nav-link" to={'/login'}>Đăng nhập</Link>
                     </li>}
 
                 </ul>

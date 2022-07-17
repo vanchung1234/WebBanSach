@@ -1,15 +1,11 @@
 import React from 'react'
 
 const BgImage = () => {
-    const url = window.location.pathname.substring(1)
+    const url = window.location.pathname
 
-    const style = {
-        display: (url === 'dashboard' || url === '' || url === 'login' || url === 'dashboard/orders' || url === 'dashboard/products') ? 'none' : 'block'
-    }
-
-
+    if (url === '/dashboard' || url === '/' || url === '/login' || url === '/dashboard/orders' || url === '/dashboard/products') return null;
     return (
-        <div className="hero-image" style={style}>
+        <div className="hero-image">
 
         </div>
     )

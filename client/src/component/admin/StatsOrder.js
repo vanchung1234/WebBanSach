@@ -6,18 +6,18 @@ const StatsOrder = () => {
     const [orderStats, setOrderStats] = useState([]);
     const MONTHS = useMemo(
         () => [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Agu",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
+            "Tháng 1",
+            "Tháng 2",
+            "Tháng 3",
+            "Tháng 4",
+            "Tháng 5",
+            "Tháng 6",
+            "Tháng 7",
+            "Tháng 8",
+            "Tháng 9",
+            "Tháng 10",
+            "Tháng 11",
+            "Tháng 12",
         ],
         []
     );
@@ -29,7 +29,7 @@ const StatsOrder = () => {
                 res.data.map((item) =>
                     setOrderStats((prev) => [
                         ...prev,
-                        { name: MONTHS[item._id - 1], "Benefit": item.total },
+                        { name: MONTHS[item._id - 1], "Lợi nhuận": item.total },
                     ])
                 );
             } catch { }
@@ -40,9 +40,9 @@ const StatsOrder = () => {
 
         <Chart
             data={orderStats}
-            title="Order Analytics"
+            title="Phân tích hóa đơn"
             grid
-            dataKey="Benefit"
+            dataKey="Lợi nhuận"
         />
     )
 }

@@ -22,15 +22,15 @@ const FeaturedInfo = () => {
     return (
         <div className='feartureInfo'>
             <div className="featuredItem col-lg-5 col-sm-5 col-xs-12">
-                <span className="featuredTitle">Total Revanue</span>
+                <span className="featuredTitle">Tổng lợi nhuận</span>
                 <div className="featuredMoneyContainer">
                     <span className="featuredMoney">{order.totalAmount}$</span>
 
                 </div>
-                <span className="featuredSub">Compared all</span>
+                <span className="featuredSub">Thống kê tất cả</span>
             </div>
             <div className="featuredItem col-lg-5 col-sm-5 col-xs-12 ">
-                <span className="featuredTitle">Revanue</span>
+                <span className="featuredTitle">Lợi nhuận</span>
                 <div className="featuredMoneyContainer">
                     <span className="featuredMoney">{income[1]?.total}$</span>
                     <span className="featuredMoneyRate">
@@ -42,7 +42,7 @@ const FeaturedInfo = () => {
                         )}
                     </span>
                 </div>
-                <span className="featuredSub">Compared to last month</span>
+                <span className="featuredSub">Thống kê theo tháng</span>
             </div>
 
         </div>

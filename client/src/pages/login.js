@@ -66,8 +66,8 @@ const Login = () => {
                 <div className="LoginSignUpBox">
                     <div className="mb-3">
                         <div className="login_signUp_toggle">
-                            <p onClick={(e) => switchTabs(e, "login")}>LOGIN</p>
-                            <p onClick={(e) => switchTabs(e, "register")}>REGISTER</p>
+                            <p onClick={(e) => switchTabs(e, "login")}>ĐĂNG NHẬP</p>
+                            <p onClick={(e) => switchTabs(e, "register")}>ĐĂNG KÝ</p>
                         </div>
                         <button ref={switcherTab}></button>
                     </div>
@@ -76,7 +76,7 @@ const Login = () => {
                             <FaceIcon />
                             <input
                                 type="text"
-                                placeholder="Username"
+                                placeholder="Tên đăng nhập"
                                 required
                                 value={loginUsername}
                                 onChange={(e) => setLoginUsername(e.target.value)}
@@ -86,15 +86,15 @@ const Login = () => {
                             <LockOpenIcon />
                             <input
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Mật khẩu"
                                 required
                                 value={loginPassword}
                                 onChange={(e) => setLoginPassword(e.target.value)}
 
                             />
                         </div>
-                        <Link to="/password/forgot">Forget Password ?</Link>
-                        <input type="submit" value="Login" className="loginBtn" />
+                        <Link to="/password/forgot">Quên mật khẩu ?</Link>
+                        <input type="submit" value="Đăng nhập" className="loginBtn" />
                     </form>
                     <form
                         className="signUpForm"
@@ -107,7 +107,7 @@ const Login = () => {
                             <FaceIcon />
                             <input
                                 type="text"
-                                placeholder="Username"
+                                placeholder="Tên đăng nhập"
                                 name="username"
                                 value={username}
                                 onChange={registerDataChange}
@@ -122,7 +122,7 @@ const Login = () => {
                             <LockOpenIcon />
                             <input
                                 type="password"
-                                placeholder="Password"
+                                placeholder="Mật khẩu"
 
                                 name="password"
                                 value={password}
@@ -140,7 +140,7 @@ const Login = () => {
                             <LockOpenIcon />
                             <input
                                 type="password"
-                                placeholder="Confirm Password"
+                                placeholder="Nhập lại mật khẩu"
 
                                 name="cfpassword"
                                 value={cfpassword}
@@ -158,7 +158,7 @@ const Login = () => {
                             <input
                                 type="text"
                                 placeholder="Protected Code"
-                                name="protectedCode"
+                                name="Mã bảo vệ"
                                 value={protectedCode}
                                 onChange={registerDataChange}
                                 style={{ background: `${alert.password ? "#fd2d6a14" : ""}` }}
@@ -169,7 +169,7 @@ const Login = () => {
                         <small className="form-text text-danger mb-2">
                             {alert.protectedCode ? alert.protectedCode : ""}
                         </small>
-                        <input type="submit" value="Register" className="signUpBtn" />
+                        <input type="submit" value="Đăng ký" className="signUpBtn" />
                     </form>
                 </div>
             </div>

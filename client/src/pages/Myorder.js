@@ -13,7 +13,7 @@ const Myorders = () => {
         {
             field: "orderItem",
             headerName: "orderItem",
-            minWidth: 350,
+            minWidth: 420,
             renderCell: (params) => {
                 const orderItem = params.row.orderItems
                 return (
@@ -23,7 +23,7 @@ const Myorders = () => {
                                 <div className="productListItem">
                                     <img className="productListImg mx-1" src={item.image} alt="" />
                                     <span className='mr-3'>{item.name} </span>
-                                    <span className='mx-3'>Price: {item.price}</span>
+                                    <span className='mx-3'>Price: {item.price}$</span>
                                     <span className='mx-3'>Quantity: {item.quantity}</span>
                                 </div>
                             ))

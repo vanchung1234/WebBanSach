@@ -19,7 +19,7 @@ const ConfirmOrder = () => {
 
 
 
-  const shippingCharges = subtotal > 1000 ? 0 : 200;
+  const shippingCharges = subtotal > 100 ? 0 : 1;
 
   const totalPrice = subtotal + shippingCharges;
 
@@ -71,28 +71,28 @@ const ConfirmOrder = () => {
       <div className="confirmOrderPage">
         <div>
           <div className="confirmshippingArea">
-            <Typography>Shipping Info</Typography>
+            <Typography>Thông tin giao hàng</Typography>
             <div className="confirmshippingAreaBox">
               <div>
-                <p>Name:</p>
+                <p>Tên:</p>
                 <span>{auth.user.username}</span>
               </div>
               <div>
-                <p>Phone:</p>
+                <p>Số điện thoại:</p>
                 <span>{shippingInfo.phone}</span>
               </div>
               <div>
-                <p>Address:</p>
+                <p>Địa chỉ:</p>
                 <span>{addresss}</span>
               </div>
               <div>
-                <p>Phuong thuc thanh toan:</p>
+                <p>Phương thức thanh toán:</p>
                 <span>{shippingInfo.payment}</span>
               </div>
             </div>
           </div>
           <div className="confirmCartItems">
-            <Typography>Your Cart Items:</Typography>
+            <Typography>Sản phẩm đặt hàng:</Typography>
             <div className="confirmCartItemsContainer">
               {cartItems &&
                 cartItems.map((item) => (
@@ -113,14 +113,14 @@ const ConfirmOrder = () => {
         {/*  */}
         <div>
           <div className="orderSummary">
-            <Typography>Order Summery</Typography>
+            <Typography>Thanh toán</Typography>
             <div>
               <div>
-                <p>Subtotal:</p>
+                <p>Tổng tiền sản phẩm:</p>
                 <span>{subtotal}$</span>
               </div>
               <div>
-                <p>Shipping Charges:</p>
+                <p>Tiền giao hàng:</p>
                 <span>{shippingCharges}$</span>
               </div>
 
@@ -128,12 +128,12 @@ const ConfirmOrder = () => {
 
             <div className="orderSummaryTotal">
               <p>
-                <b>Total:</b>
+                <b>Tổng thanh toán:</b>
               </p>
               <span>{totalPrice}$</span>
             </div>
             {
-              shippingInfo.payment === "Thanh toan tien mat" ? <button onClick={proceedToPayment} >Proceed To Payment</button>
+              shippingInfo.payment === "Thanh toán tiền mặt" ? <button style={{ height: '50px' }} onClick={proceedToPayment} >Tiếp tục thanh toán</button>
                 : <PaypalButton total={totalPrice}
                   tranSuccess={tranSuccess} onClick={proceedToPayment}></PaypalButton>
 

@@ -27,7 +27,7 @@ export const addToCart = (id, quantity) => async (dispatch, getState) => {
 
         })
 
-        dispatch({ type: GLOBALTYPES.ALERT, payload: { success: "Add item to cart." } })
+        dispatch({ type: GLOBALTYPES.ALERT, payload: { success: "Thêm sản phẩm vào giỏ." } })
         localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
     } catch (error) {
         // dispatch({

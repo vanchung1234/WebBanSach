@@ -10,7 +10,7 @@ const WidgetLg = () => {
     return (
         <div className="widgetLg">
             <div style={{ display: "flex", justifyContent: 'space-around' }}>
-                <h3 className="widgetLgTitle">Latest transactions</h3>
+                <h3 className="widgetLgTitle">Các đơn hàng gần đây</h3>
                 <Link to='/dashboard/orders'>
                     <Button
                         id="createProductBtn"
@@ -23,10 +23,10 @@ const WidgetLg = () => {
             <table className="widgetLgTable">
                 <tbody>
                     <tr className="widgetLgTr">
-                        <th className="widgetLgTh">Customer</th>
-                        <th className="widgetLgTh">Date</th>
-                        <th className="widgetLgTh">Amount</th>
-                        <th className="widgetLgTh">Status</th>
+                        <th className="widgetLgTh">Khách hàng</th>
+                        <th className="widgetLgTh">Thời gian đặt</th>
+                        <th className="widgetLgTh">Tổng tiền</th>
+                        <th className="widgetLgTh">Trạng thái</th>
                     </tr>
                     {
                         orders.slice(0, 3).map(order => (

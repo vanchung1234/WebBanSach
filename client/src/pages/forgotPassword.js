@@ -29,7 +29,7 @@ const ForgotPassword = () => {
             <Fragment>
                 <div className="forgotPasswordContainer">
                     <div className="LoginSignUpBox">
-                        <h2 className="forgotPasswordHeading">Forgot Password</h2>
+                        <h2 className="forgotPasswordHeading">Quên mật khẩu</h2>
 
                         <form
                             className="forgotPasswordForm mb-4 py-1"
@@ -39,7 +39,7 @@ const ForgotPassword = () => {
                                 <FaceIcon />
                                 <input
                                     type="text"
-                                    placeholder="Username"
+                                    placeholder="Tên đăng nhập"
                                     style={{ background: `${alert.username ? '#fd2d6a14' : ''}` }}
                                     name="username"
                                     value={username}
@@ -54,7 +54,7 @@ const ForgotPassword = () => {
                                 <LockOpenIcon />
                                 <input
                                     type="password"
-                                    placeholder="Protected Code"
+                                    placeholder="Mã bảo vệ"
                                     style={{ background: `${alert.username ? '#fd2d6a14' : ''}` }}
 
                                     name="protectedCode"
@@ -70,7 +70,7 @@ const ForgotPassword = () => {
                                 <LockOpenIcon />
                                 <input
                                     type="password"
-                                    placeholder="NewPassword"
+                                    placeholder="Mật khẩu mới"
                                     style={{ background: `${alert.username ? '#fd2d6a14' : ''}` }}
                                     name="password"
                                     value={password}
@@ -82,11 +82,11 @@ const ForgotPassword = () => {
                             </small>
                             <input
                                 type="submit"
-                                value="Send"
+                                value="Gửi"
                                 className="forgotPasswordBtn"
                             />
 
-                            <Link to="/login">Login?</Link>
+                            <Link to="/login">Đăng nhập?</Link>
 
                         </form>
                     </div>

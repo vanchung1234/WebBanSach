@@ -18,18 +18,18 @@ const UserOptions = () => {
     const dispatch = useDispatch();
 
     const options = [
-        { icon: <ListAltIcon />, name: "Orders", func: orders },
-        { icon: <PersonIcon />, name: "Profile", func: account },
+        { icon: <ListAltIcon />, name: "Đơn hàng", func: orders },
+        { icon: <PersonIcon />, name: "Hồ sơ", func: account },
         {
             icon: (
                 <ShoppingCartIcon
                     style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
                 />
             ),
-            name: `Cart(${cartItems.length})`,
+            name: `Giỏ hàng(${cartItems.length})`,
             func: cart,
         },
-        { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
+        { icon: <ExitToAppIcon />, name: "Đăng xuất", func: logoutUser },
     ];
 
     if (auth.user.role === "admin") {

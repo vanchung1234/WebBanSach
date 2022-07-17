@@ -2,25 +2,23 @@ const valid = ({ username, password, cfpassword, protectedCode }) => {
     const err = {};
 
     if (!username) {
-        err.username = "Please add your user name.";
-    } else if (username.replace(/ /g, "").length > 25) {
-        err.username = "User name is up to 25 characters long.";
+        err.username = "Hãy nhập vào tên đăng nhập.";
     }
 
     if (!password) {
-        err.password = "Please add your password.";
+        err.password = "Hãy nhập vào mật khẩu.";
     }
 
     if (!cfpassword) {
-        err.cfpassword = "Please add your cfpassword.";
+        err.cfpassword = "Hãy nhập vào nhập vào mật khẩu.";
     }
 
     if (password !== cfpassword) {
-        err.cfpassword = "Confirm password did not match.";
+        err.cfpassword = "Nhập lại mật khẩu không đúng với mật khẩu.";
     }
 
     if (!protectedCode) {
-        err.protectedCode = "Please add your protected code.";
+        err.protectedCode = "Hãy nhập mã bảo vệ.";
     }
 
     return {

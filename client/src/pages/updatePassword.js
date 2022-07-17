@@ -31,7 +31,7 @@ const UpdatePassword = () => {
             <Fragment>
                 <div className="updatePasswordContainer">
                     <div className="updatePasswordBox">
-                        <div className="d-flex"><h2 className="updateProfileHeading">Update Password</h2>
+                        <div className="d-flex"><h2 className="updateProfileHeading">Thay đổi mật khẩu</h2>
                         </div>
 
                         <form
@@ -42,7 +42,7 @@ const UpdatePassword = () => {
                                 <VpnKeyIcon />
                                 <input
                                     type="password"
-                                    placeholder="Old Password"
+                                    placeholder="Mật khẩu cũ"
                                     name="oldPassword"
                                     required
                                     value={oldPassword}
@@ -54,7 +54,7 @@ const UpdatePassword = () => {
                                 <LockOpenIcon />
                                 <input
                                     type="password"
-                                    placeholder="New Password"
+                                    placeholder="Mật khẩu mới"
                                     required
                                     name="password"
                                     value={password}
@@ -65,7 +65,7 @@ const UpdatePassword = () => {
                                 <LockIcon />
                                 <input
                                     type="password"
-                                    placeholder="Confirm Password"
+                                    placeholder="Xác nhận mật khẩu"
                                     required
                                     name="cfpassword"
                                     value={cfpassword}
@@ -74,7 +74,7 @@ const UpdatePassword = () => {
                             </div>
                             <input
                                 type="submit"
-                                value="Change"
+                                value="Thay đổi"
                                 className="updatePasswordBtn"
                             />
                         </form>

@@ -31,30 +31,30 @@ const Info = ({ id, auth, profile, dispatch }) => {
                 {userData.map((user) => (
                     <>
                         <div key={user._id}>
-                            <h1>My Profile</h1>
+                            <h1>Hồ sơ của tôi</h1>
                             <img src={user.avatar} alt={user.name} className="mb-3" />
                             <button
                                 className="btn "
                                 onClick={() => setOnEdit(true)}
                                 style={{ backgroundColor: 'red' }}
                             >
-                                Edit Profile
+                                Thay đổi thông tin hồ sơ
                             </button>
                         </div>
                         <div>
                             <div>
-                                <h4>User Name</h4>
+                                <h4>Tên đăng nhập</h4>
                                 <p>{user.username}</p>
                             </div>
 
                             <div>
-                                <h4>Joined On</h4>
+                                <h4>Tham gia vào</h4>
                                 <p>{String(user.createdAt).substr(0, 10)}</p>
                             </div>
 
                             <div>
-                                <Link to="/Myorder">My Orders</Link>
-                                <Link to="/updatePassword">Change Password</Link>
+                                <Link to="/Myorder">Đơn hàng của tôi</Link>
+                                <Link to="/updatePassword">Thay đổi mật khẩu</Link>
                             </div>
                         </div>
 

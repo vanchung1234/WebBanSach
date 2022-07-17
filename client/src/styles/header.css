@@ -53,6 +53,9 @@
     text-align: end;
     margin-left: 15%;
   }
+  .nav-link {
+    font-size: 0.9rem !important;
+  }
 }
 
 @media (max-width: 991px) {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
-import { GLOBALTYPES } from '../../redux/action/globalType'
 import { getProducts } from '../../redux/action/productAction'
 import Products from '../Product/Products'
 import Notfoundproducts from './Notfoundproducts'
@@ -76,23 +75,23 @@ const Filters = () => {
                     </form>
                 </div>
                 <div>
-                    <h6 className="p-1 border-bottom">Filter by:</h6>
+                    <h6 className="p-1 border-bottom">Lọc:</h6>
                     <form className="ml-md-2" value={sort} onChange={e => setSort(e.target.value)}>
                         <div className="form-inline border rounded p-sm-2 my-2">
                             <input type="radio" name="type" value='' />
-                            <label htmlFor="boring" className="pl-1 pt-sm-0 pt-1">Newest</label>
+                            <label htmlFor="boring" className="pl-1 pt-sm-0 pt-1">Lượng đánh giá: Cao-Thấp</label>
                         </div>
                         <div className="form-inline border rounded p-sm-2 my-2">
                             <input type="radio" name="type" value='sort=oldest' />
-                            <label htmlFor="ugly" className="pl-1 pt-sm-0 pt-1">Oldest</label>
+                            <label htmlFor="ugly" className="pl-1 pt-sm-0 pt-1">Điểm đánh giá: Cao-Thấp</label>
                         </div>
                         <div className="form-inline border rounded p-md-2 p-sm-1">
                             <input type="radio" name="type" value='sort=-price' />
-                            <label htmlFor="notugly" className="pl-1 pt-sm-0 pt-1">Price: Hight-Low</label>
+                            <label htmlFor="notugly" className="pl-1 pt-sm-0 pt-1">Giá: Cao-Thấp</label>
                         </div>
                         <div className="form-inline border rounded p-md-2 p-sm-1">
                             <input type="radio" name="type" value='sort=price' />
-                            <label htmlFor="notugly" className="pl-1 pt-sm-0 pt-1">Price: Low-Hight</label>
+                            <label htmlFor="notugly" className="pl-1 pt-sm-0 pt-1">Giá: Thấp-Cao</label>
                         </div>
                     </form>
                 </div>
@@ -102,12 +101,12 @@ const Filters = () => {
                 <div >
 
 
-                    <h6 className="p-3 border-bottom">Category:</h6>
+                    <h6 className="p-3 border-bottom">Danh mục:</h6>
 
                     <form className="ml-md-2 mb-4" value={category} onChange={handleCategory}>
                         <div className="form-inline border rounded p-sm-2 my-2">
                             <input type="radio" name='category' value='' />
-                            <label htmlFor="boring" className="pl-1 pt-sm-0 pt-1">All products</label>
+                            <label htmlFor="boring" className="pl-1 pt-sm-0 pt-1">Tất cả sản phẩm</label>
                         </div>
                         {
                             categorys.categories.map(category => (
@@ -121,23 +120,23 @@ const Filters = () => {
                 </div>
 
                 <div>
-                    <h6 className="p-1 border-bottom">Filter by:</h6>
+                    <h6 className="p-1 border-bottom">Lọc:</h6>
                     <form className="ml-md-2" value={sort} onChange={e => setSort(e.target.value)}>
                         <div className="form-inline border rounded p-sm-2 my-2">
                             <input type="radio" name="type" value='sort=-numOfReviews' />
-                            <label htmlFor="boring" className="pl-1 pt-sm-0 pt-1">NumberOfreview: High-Low</label>
+                            <label htmlFor="boring" className="pl-1 pt-sm-0 pt-1">Lượng đánh giá: Cao-Thấp</label>
                         </div>
                         <div className="form-inline border rounded p-sm-2 my-2">
                             <input type="radio" name="type" value='sort=-ratings' />
-                            <label htmlFor="ugly" className="pl-1 pt-sm-0 pt-1">Ratings: High-Low</label>
+                            <label htmlFor="ugly" className="pl-1 pt-sm-0 pt-1">Điểm đánh giá: Cao-Thấp</label>
                         </div>
                         <div className="form-inline border rounded p-md-2 p-sm-1">
                             <input type="radio" name="type" value='sort=-price' />
-                            <label htmlFor="notugly" className="pl-1 pt-sm-0 pt-1">Price: Hight-Low</label>
+                            <label htmlFor="notugly" className="pl-1 pt-sm-0 pt-1">Giá: Cao-Thấp</label>
                         </div>
                         <div className="form-inline border rounded p-md-2 p-sm-1">
                             <input type="radio" name="type" value='sort=price' />
-                            <label htmlFor="notugly" className="pl-1 pt-sm-0 pt-1">Price: Low-Hight</label>
+                            <label htmlFor="notugly" className="pl-1 pt-sm-0 pt-1">Giá: Thấp-Cao</label>
                         </div>
                     </form>
                 </div>
@@ -148,7 +147,7 @@ const Filters = () => {
 
 
                 <div className="container">
-                    <input type="text" className='filter_search' value={searchs} placeholder="  Enter your search!"
+                    <input type="text" className='filter_search' value={searchs} placeholder="Nhập vào đây!"
                         onChange={e => setSearch(e.target.value)} />
 
                     {allproducts.result !== 0 ?

@@ -57,7 +57,7 @@ const orderCtrl = {
 
             newOrder.save()
             res.json({
-                msg: "create order",
+                msg: "Tạo đơn hàng thành công",
                 newOrder: {
                     ...newOrder._doc,
                     user: req.user
@@ -130,7 +130,7 @@ const orderCtrl = {
             const order = await Orders.findById(req.params.id).populate("user", "username avatar");
 
             if (!order) {
-                return res.status(400).json({ msg: "Order not found with this Id" });
+                return res.status(400).json({ msg: "Không tìm thấy đơn hàng" });
             }
 
             const { orderStatus } = req.body
@@ -151,7 +151,7 @@ const orderCtrl = {
 
             await order.save()
             res.json({
-                msg: "Updated Order!",
+                msg: "Cập nhật trạng thái đơn hàng!",
                 newOrder: {
                     ...order._doc,
                     orderStatus
@@ -168,12 +168,12 @@ const orderCtrl = {
         try {
             const order = await Orders.findById(req.params.id);
             if (!order) {
-                return res.status(400).json({ msg: "Order not found with this Id" });
+                return res.status(400).json({ msg: "Không tìm thấy đơn hàng" });
             }
             await order.remove();
 
             res.status(200).json({
-                msg: 'delete order'
+                msg: 'Xóa đơn hàng thành công'
             });
         } catch (error) {
             return res.status(500).json({ msg: error.message })
@@ -252,7 +252,7 @@ const orderCtrl = {
 
             await order.save()
             res.json({
-                msg: "Updated Order!",
+
                 newOrder: {
                     ...order._doc,
 

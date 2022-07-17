@@ -123,7 +123,7 @@ const productCtrl = {
             await newProduct.save()
 
             res.json({
-                msg: "create Product",
+                msg: "Tạo sản phẩm!",
                 newProduct: {
                     ...newProduct._doc,
                     user: req.user
@@ -150,7 +150,7 @@ const productCtrl = {
 
 
             res.json({
-                msg: "Updated Product!",
+                msg: "Cập nhật sản phẩm!",
                 newProduct: {
                     ...product._doc,
                     name, description, price, stock, category, images
@@ -165,7 +165,7 @@ const productCtrl = {
             const product = await Products.findOneAndDelete({ _id: req.params.id, user: req.userId })
             await Reviews.deleteMany({ _id: product.reviews })
             res.json({
-                msg: 'Deleted Product!',
+                msg: 'Xóa sản phẩm!',
                 newProduct: {
                     ...product,
                     user: req.user

@@ -11,13 +11,12 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import { Country, State } from "country-state-city";
 import TransferWithinAStationIcon from "@material-ui/icons/TransferWithinAStation";
 import { useAlert } from "react-alert";
-import Typography from "@material-ui/core/Typography";
 
 const Shipping = () => {
     const dispatch = useDispatch()
     const payments = [
-        'Thanh toan tien mat',
-        'Thanh toan online'
+        'Thanh toán tiền mặt',
+        'Thanh toán online'
     ]
     const { shippingInfo } = useSelector((state) => state.cart);
     const [city, setCity] = useState(shippingInfo.city)
@@ -32,7 +31,7 @@ const Shipping = () => {
         e.preventDefault();
 
         if (phone.length < 10 || phone.length > 10) {
-            alert.error("Phone Number should be 10 digits Long");
+            alert.error("Định dạng số điện thoại không đúng");
             return;
         }
         dispatch(
@@ -48,7 +47,7 @@ const Shipping = () => {
 
             <div className="shippingContainer">
                 <div className="shippingBox">
-                    <h2 className="shippingHeading">Shipping Details</h2>
+                    <h2 className="shippingHeading">Thông tin giao hàng</h2>
 
                     <form
                         className="shippingForm"
@@ -64,7 +63,7 @@ const Shipping = () => {
                                 value={country}
                                 onChange={(e) => setCountry(e.target.value)}
                             >
-                                <option value="">Country</option>
+                                <option value="">Quốc gia</option>
                                 {Country &&
                                     Country.getAllCountries().map((item) => (
                                         <option key={item.isoCode} value={item.isoCode}>
@@ -83,7 +82,7 @@ const Shipping = () => {
                                 value={city}
                                 onChange={(e) => setCity(e.target.value)}
                             >
-                                <option value="">City</option>
+                                <option value="">Thành phố</option>
                                 {State &&
                                     State.getStatesOfCountry(country).map((item) => (
                                         <option key={item.isoCode} value={item.isoCode}>
@@ -98,7 +97,7 @@ const Shipping = () => {
                             <HomeIcon />
                             <input
                                 type="text"
-                                placeholder="Address"
+                                placeholder="Địa chỉ"
                                 required
                                 value={address}
                                 onChange={(e) => setAddress(e.target.value)}
@@ -109,7 +108,7 @@ const Shipping = () => {
                             <PhoneIcon />
                             <input
                                 type="number"
-                                placeholder="Phone Number"
+                                placeholder="Số điện thoại"
                                 required
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
@@ -125,7 +124,7 @@ const Shipping = () => {
                                 value={payment}
                                 onChange={(e) => setPayment(e.target.value)}
                             >
-                                <option value="">Phuong thuc thanh toan</option>
+                                <option value="">Phương thức thanh toán</option>
                                 {
                                     payments.map((payment) => (
                                         <option key={payment} value={payment}>
@@ -157,7 +156,7 @@ const Shipping = () => {
 
                         <input
                             type="submit"
-                            value="Continue"
+                            value="Tiếp tục "
                             className="shippingBtn"
                             disabled={city ? false : true}
                         />

@@ -37,8 +37,8 @@ const Slider = () => {
 
             </div>
             <div className="content">
-                <h1>Sách thì đẹp đấy</h1>
-                <h3>Mỗi tội không đẹp bằng Anh chung</h3>
+                <h1>Tiệm sách team 2 </h1>
+                <h3>Xin chào quý khách</h3>
                 <a href="#about" className="btn">Tìm hiểu ngay</a>
                 <div className="bottom-left"
                     onClick={toggle}>{playing ? <i className="fa-solid fa-pause fa-4x"></i> : <i className="fa-solid fa-play fa-4x"></i>}</div>

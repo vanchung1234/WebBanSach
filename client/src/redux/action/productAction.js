@@ -112,7 +112,6 @@ export const getProducts = (page, category, sort, searchs) => async (dispatch) =
 
 export const genericProducts = (product, category) => async (dispatch) => {
     try {
-        dispatch({ type: PRODUCT_TYPES.LOADING_PRODUCT, payload: true })
         const res = await getDataAPI(`generic/${product._id}?category=${category}`)
         dispatch({ type: PRODUCT_TYPES.GENERIC_PRODUCT, payload: { ...res.data } })
     } catch (err) {

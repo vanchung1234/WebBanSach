@@ -9,7 +9,7 @@ const WidgetSm = () => {
     return (
         <div className="widgetSm">
             <div style={{ display: "flex", justifyContent: 'space-around' }}>
-                <h3 className="widgetLgTitle">New member</h3>
+                <h3 className="widgetLgTitle">Người dùng mới</h3>
                 <Link to='/dashboard/users'>
                     <Button
                         id="createProductBtn"

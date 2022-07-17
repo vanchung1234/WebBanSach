@@ -34,14 +34,14 @@ const reviewCtrl = {
             product.ratings = avg / product.reviews.length;
 
             const review = await Reviews.find({ productId, user: req.user._id })
-            if (review.length > 0) return res.status(400).json({ msg: 'ban da review san pham nay r' })
+            if (review.length > 0) return res.status(400).json({ msg: 'Bạn đã review sản phẩm này rồi!' })
 
             await product.save()
             await newReview.save()
 
 
             res.status(200).json({
-                msg: 'review thanh cong',
+                msg: 'Tạo review thành công',
                 product,
                 newReview,
 

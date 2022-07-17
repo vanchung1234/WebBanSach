@@ -7,7 +7,7 @@ const categoryCtrl = {
 
             const category = await Category.findOne({ name })
             if (category)
-                return res.status(400).json({ msg: "category ton tai" })
+                return res.status(400).json({ msg: "Danh mục đã tồn tại" })
 
             const newCategory = new Category({
                 name, user: req.userId
@@ -15,7 +15,7 @@ const categoryCtrl = {
             await newCategory.save()
 
             res.json({
-                msg: 'Created Category!',
+                msg: 'Tạo danh mục thành công!',
                 newCategory: {
                     ...newCategory._doc,
                     user: req.user
@@ -47,7 +47,7 @@ const categoryCtrl = {
                 name
             })
             res.json({
-                msg: "Updated Category!",
+                msg: "Cập nhật danh mục thành công!",
                 newCategory: {
                     ...category._doc,
                     name
@@ -62,7 +62,7 @@ const categoryCtrl = {
             const category = await Category.findOneAndDelete({ id: req.params.id, user: req.userId })
 
             res.json({
-                msg: 'Deleted Category!',
+                msg: 'Xóa danh mục thành công!',
                 newCategory: {
                     ...category,
                     user: req.user

@@ -28,6 +28,7 @@ import Product from "./pages/product/[id]";
 import AdminRouter from "./customRouter/AdminRouter";
 import { myOrder } from "./redux/action/orderAction";
 import Category from "./pages/category";
+import Contact from "./pages/contact";
 function App() {
   const { auth, modal, categoryModal, productModal, alert } = useSelector(state => state)
   const pathname = window.location.pathname
@@ -51,7 +52,6 @@ function App() {
       }
 
       {
-        pathname !== "/" &&
         <BgImage />
       }
 
@@ -98,6 +98,7 @@ function App() {
         <Route path="/products" element={<Products />} />
 
         <Route path="/login" element={<Login />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/password/forgot" element={<ForgotPassword />} />
         <Route path="/product/:id" element={<Product />} />
 
