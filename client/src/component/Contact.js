@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <div className='row' style={{ width: '100%', padding: '70px 0', backgroundColor: 'black', margin: '0px', marginTop: '70px' }}>
+        <div className='row' style={{ width: '100%', padding: '40px 0', backgroundColor: 'black', margin: '0px', marginTop: '40px', textAlign: 'center' }}>
             <div className='col-sm-6 col-md-8 col-lg-7'>
                 <div className='callout-text font-alt'>
                     <h3 class="callout-title">Đăng ký ngay?</h3>

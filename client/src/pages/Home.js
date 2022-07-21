@@ -111,9 +111,9 @@ const Home = () => {
 
 
                 </div>
-                <div className='row' style={{ width: '100%', padding: '70px 0', backgroundColor: 'black', margin: '0px' }}>
+                <div className='row' style={{ width: '100%', padding: '40px 0', backgroundColor: 'black', margin: '0px', textAlign: 'center' }}>
                     <div className='col-sm-6 col-md-8 col-lg-7'>
-                        <div className='callout-text font-alt'>
+                        <div className='callout-text font-alt' style={{ textAlign: 'center' }}>
                             <h3 className="callout-title">Bạn muốn xem thêm nhiều sản phẩm hơn nữa?</h3>
                             <p>Còn nhiều sản phẩm hấp dẫn dành cho bạn.</p>
                         </div>

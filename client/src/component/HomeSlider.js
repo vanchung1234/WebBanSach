@@ -48,7 +48,7 @@ const HomeSlider = () => {
         >
             <div className='slider_home'>
                 <img
-                    src="https://toigingiuvedep.vn/wp-content/uploads/2021/11/hinh-anh-cuon-sach-mo-ra-ben-ly-ca-phe.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBy9wGbJdcFQTbsUmbHvMvmW3Qxs7YdPwvgjfDYXiv1MxBVb8xDKAhyyjztoRFYdCsW4E&usqp=CAU"
                     style={{
                         display: 'block',
                         height: '100%',
@@ -58,7 +58,7 @@ const HomeSlider = () => {
                 />
                 <div className='centered'>
                     <i className="fa-solid slider-icon fa-2xl fa-quote-left"></i>
-                    <span className='font-alt py-3'>Học, học nữa, học mãi</span>
+                    <span className='font-alt hst py-3 '>Học, học nữa, học mãi</span>
                     <i className="fa-solid slider-icon fa-2xl fa-quote-right"></i>
                     <span>Lenin</span>
                 </div>
@@ -68,7 +68,7 @@ const HomeSlider = () => {
 
             <div className='slider_home'>
                 <img
-                    src="https://img4.thuthuatphanmem.vn/uploads/2020/12/26/anh-cuon-sach-mo-ra-dep_051456444.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTThkO20lx6x0a887tW6OnbqyveZcyEU6tsmg&usqp=CAU"
                     style={{
                         display: 'block',
                         height: '100%',
@@ -78,7 +78,7 @@ const HomeSlider = () => {
                 />
                 <div className='centered'>
                     <i className="fa-solid slider-icon fa-2xl fa-quote-left"></i>
-                    <span className='font-alt py-3'>Tất cả những gì con người làm, nghĩ hoặc trở thành được bảo tồn một cách kỳ diệu trên những trang sách</span>
+                    <span className='font-alt hst py-3'>Tất cả những gì con người làm, nghĩ hoặc trở thành được bảo tồn một cách kỳ diệu trên những trang sách</span>
                     <i className="fa-solid slider-icon fa-2xl fa-quote-right"></i>
                     <span>Thomas Carlyle</span>
                 </div>
@@ -86,7 +86,7 @@ const HomeSlider = () => {
 
             <div className='slider_home'>
                 <img
-                    src="https://chuaadida.com/Images/News/chuaadida_full_moi-con-nguoi-deu-la-mot-cuon-sach-hay.jpg"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1JgWTbxWccBvm5_aAk-6_t_19sBAE_hrIGXbZMxzCF_Wutr2FyXGK1mDo4tP9qxRKqrc&usqp=CAU"
                     style={{
                         display: 'block',
                         height: '100%',
@@ -96,7 +96,7 @@ const HomeSlider = () => {
                 />
                 <div className='centered'>
                     <i className="fa-solid slider-icon fa-2xl fa-quote-left"></i>
-                    <span className='font-alt py-3'>Sách là nguồn của cải quý báu của thế giới và là di sản xứng đáng của các thế hệ và các quốc gia</span>
+                    <span className='font-alt hst py-3'>Sách là nguồn của cải quý báu của thế giới và là di sản xứng đáng của các thế hệ và các quốc gia</span>
                     <i className="fa-solid slider-icon fa-2xl fa-quote-right"></i>
                     <span>Henry David Thoreau</span>
                 </div>

@@ -9,7 +9,7 @@ const Header = () => {
     const [navSize, setnavSize] = useState("6rem");
     const [navColor, setnavColor] = useState("transparent");
     const listenScrollEvent = () => {
-        window.scrollY > 10 ? setnavColor("rgba(0, 0, 0, 0.84)") : setnavColor("transparent");
+        window.scrollY > 10 ? setnavColor("black") : setnavColor("transparent");
         window.scrollY > 10 ? setnavSize("5.4rem") : setnavSize("9rem");
     };
     useEffect(() => {
